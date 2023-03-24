@@ -183,18 +183,38 @@ namespace Lista3PR2Emanuela
 
                     break;
 
-             case 4:int n1,n2;
+             case 4:int n1,n2,result;
 
                     Console.WriteLine("Digite o primeiro número: ");
                     Console.WriteLine("Digite o segundo número: ");
 
-                     Console.WriteLine("=====MENU=====");
+                    Console.WriteLine("=====MENU=====");
                     Console.WriteLine("+");
                     Console.WriteLine("-");
                     Console.WriteLine("*");
                     Console.WriteLine("/");
-                    Console.WriteLine("");
                     Console.WriteLine("===============");
+
+                    n1 = int.Parse(Console.ReadLine());
+                    n2 = int.Parse(Console.ReadLine());
+
+                    switch (n1,n2)
+                    {
+                        case 1:result = n1 + n2
+                                Console.WriteLine("O resultado é: " + result);
+                                break;
+
+                        case 2:result = n1 - n2
+                                Console.WriteLine("O resultado é: " + result);
+                                break;
+
+                        case 3:result = n1 * n2
+                                Console.WriteLine("O resultado é: " + result);
+                                break;
+
+                        case 4:result = n1 / n2
+                                Console.WriteLine("O resultado é: "+ result);
+                    }
            
                     break;
 
