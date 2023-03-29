@@ -218,11 +218,150 @@ namespace Lista3PR2Emanuela
            
                     break;
 
-             case 5:
-            
-                    break;
+             case 5:float salario, percentual, salarionovo, cod;
 
-             case 6:
+                    Console.WriteLine("qual é o seu salario? ");
+                    salario = float.Parse(Console.ReadLine());
+                  
+
+                    Console.WriteLine("Escolha de acordo com seu codigo:");
+
+
+                    Console.WriteLine("==========MENU==========");
+                    Console.WriteLine("101");
+                    Console.WriteLine("102");
+                    Console.WriteLine("103");
+                    Console.WriteLine("204");
+                    Console.WriteLine("206");
+                    Console.WriteLine("301");
+                    Console.WriteLine("302");
+                    Console.WriteLine("=======================");
+
+                    cod = float.Parse(Console.ReadLine());
+
+                    switch (cod)
+                    {
+                        case 101:
+
+                            percentual = (7.5f * salario) / 100;
+
+                            salarionovo = salario + percentual;
+
+
+                            Console.WriteLine("Olá Professor(a), seu novo salario é: {0}, e o seu salario antigo é:{1} e a diferença é: {2} ", salarionovo, salario, percentual);
+                            break;
+
+                        case 102:
+                            
+                            percentual = (9.7f * salario) / 100;
+
+                            salarionovo = salario + percentual;
+
+
+                            Console.WriteLine("Olá Secretario(a), seu novo salario é: {0}, e o seu salario antigo é:{1} e a diferença é: {2} ", salarionovo, salario, percentual);
+                            break;
+
+                        case 103:
+                           
+                            percentual = (11.7f * salario) / 100;
+
+                            salarionovo = salario + percentual;
+
+
+                            Console.WriteLine("Olá PUblicitario(a), seu novo salario é: {0}, e o seu salario antigo é:{1} e a diferença é: {2} ", salarionovo, salario, percentual);
+                            break;
+
+                        case 204:
+                           
+                            percentual = (8.9f * salario) / 100;
+
+                            salarionovo = salario + percentual;
+
+
+                            Console.WriteLine("Olá Jornalista, seu novo salario é: {0}, e o seu salario antigo é:{1} e a diferença é: {2} ", salarionovo, salario, percentual);
+                            break;
+
+                        case 206:
+                           
+                            percentual = (13.24f * salario) / 100;
+
+                            salarionovo = salario + percentual;
+
+
+                            Console.WriteLine("Olá Mecanico(a), seu novo salario é: {0}, e o seu salario antigo é:{1} e a diferença é: {2} ", salarionovo, salario, percentual);
+                            break;
+
+                        case 301:
+                           
+                            percentual = (10.4f * salario) / 100;
+
+                            salarionovo = salario + percentual;
+
+
+                            Console.WriteLine("Olá Estagiario(a), seu novo salario é: {0}, e o seu salario antigo é:{1} e a diferença é: {2} ", salarionovo, salario, percentual);
+                            break;
+
+                        case 302:
+                           
+                            percentual = (14.6f * salario) / 100;
+
+                            salarionovo = salario + percentual;
+
+
+                            Console.WriteLine("Olá Tecnico(a) em TI, seu novo salario é: {0}, e o seu salario antigo é:{1} e a diferença é: {2} ", salarionovo, salario, percentual);
+                            break;
+
+                        
+                        default:
+                            percentual = (43.5f * salario) / 100;
+
+                            salarionovo = salario + percentual;
+
+
+                            Console.WriteLine("Olá, Voce não está cadastrado mas seu novo salario é: {0}, e o seu salario antigo é:{1} e a diferença é: {2} ", salarionovo, salario, percentual);
+                            break;
+                    }
+                    break;
+            
+
+             case 6: double  sal , sl , imp ;
+
+                    Console . WriteLine ( " informe o seu salário: " );
+                    sal  =  double.Parse( Console.ReadLine ());
+
+                    if ( sal  <  1903 . 98 )
+                    {
+                        Console. WriteLine ( " seu salário está isento de imposto " );
+                    }
+                    else  if ( sal  >=  1903 . 99  &&  sal  <=  2826 . 65 )
+                    {
+                        sl  =  sal  -  sal  *  0 . 075 ;
+                        imp  =  sal  %  sl ;
+                        Console . WriteLine ( " o seu salário líquido é de: R$ "  +  sl  +  " eo imposto foi de: R$ "  +  imp );
+                    }
+                    else  if ( sal  >=  2826 . 66  &&  sal  <=  3751 . 05 )
+                    {
+                        sl  =  sal  -  sal  *  0 . 15 ;
+                        imp  =  sal  %  sl ;
+                        Console . WriteLine ( " o seu salário líquido é de: R$ "  +  sl  +  " eo imposto foi de: R$ "  +  imp );
+                    }
+                    else  if ( sal  >=  3751 . 06  &&  sal  <=  4664 . 68 )
+                    {
+                        sl  =  sal  -  sal  *  0 . 225 ;
+                        imp  =  sal  %  sl ;
+                        Console . WriteLine ( " o seu salário líquido é de: R$ "  +  sl  +  " eo imposto foi de: R$ "  +  imp );
+                    }
+                    else
+                    {
+                        sl  =  sal  -  sal  *  0 . 275 ;
+                        imp  =  sal  %  sl ;
+                        Console . WriteLine ( " o seu salário líquido é de: R$ "  +  sl  +  " eo imposto foi de: R$ "  +  imp );
+                    }
+                    break ;
+
+
+                default:
+                    Console . WriteLine ( " opção inválida! " );
            
                     break;
 
