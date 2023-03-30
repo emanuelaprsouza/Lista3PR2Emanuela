@@ -372,11 +372,9 @@ namespace Lista3PR2Emanuela
            
                     break;
                     }
+
+
                     break ;
-
-
-               
-
            
 
                   default: Console.WriteLine("Opção Inválida!");
