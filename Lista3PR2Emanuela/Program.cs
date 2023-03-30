@@ -1,9 +1,11 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace Lista3PR2Emanuela
 {
@@ -19,7 +21,7 @@ namespace Lista3PR2Emanuela
             Console.WriteLine("3- EXERCÍCIO 3");
             Console.WriteLine("4- EXERCÍCIO 4");
             Console.WriteLine("5- EXERCÍCIO 5");
-            Console.WriteLine("6- EXERCÍCIO 5");
+            Console.WriteLine("6- EXERCÍCIO 6");
             Console.WriteLine("=======================");
 
             numero = int.Parse(Console.ReadLine());
@@ -92,7 +94,8 @@ namespace Lista3PR2Emanuela
 
                     switch (pg)
                     {
-                        case 1: VAFI = cp - (15 / 100);
+                        case 1: VAFI = cp - (15/100);
+                              
                             Console.WriteLine("O valor final a ser pago é:  " + VAFI);
                             break;
 
@@ -184,9 +187,13 @@ namespace Lista3PR2Emanuela
                     break;
 
              case 4:int n1,n2,result;
+                    char cara;
 
                     Console.WriteLine("Digite o primeiro número: ");
                     Console.WriteLine("Digite o segundo número: ");
+
+                    n1 = int.Parse(Console.ReadLine());
+                    n2 = int.Parse(Console.ReadLine());
 
                     Console.WriteLine("=====MENU=====");
                     Console.WriteLine("+");
@@ -195,25 +202,28 @@ namespace Lista3PR2Emanuela
                     Console.WriteLine("/");
                     Console.WriteLine("===============");
 
-                    n1 = int.Parse(Console.ReadLine());
-                    n2 = int.Parse(Console.ReadLine());
+                   cara = char.Parse(Console.ReadLine());
 
-                    switch (n1,n2)
+                    switch (cara)
                     {
-                        case 1:result = n1 + n2
-                                Console.WriteLine("O resultado é: " + result);
+                        case '+':
+                                Console.WriteLine("O resultado é: " + n1 + n2);
                                 break;
 
-                        case 2:result = n1 - n2
-                                Console.WriteLine("O resultado é: " + result);
+                        case '-':
+                                Console.WriteLine("O resultado é: " + n1 - n2);
                                 break;
 
-                        case 3:result = n1 * n2
-                                Console.WriteLine("O resultado é: " + result);
+                        case '*':
+                                Console.WriteLine("O resultado é: " + n1 * n2);
                                 break;
 
-                        case 4:result = n1 / n2
-                                Console.WriteLine("O resultado é: "+ result);
+                        case '/':
+                                Console.WriteLine("O resultado é: "+ n1 / n2);
+                            break;
+
+                             default: Console.WriteLine("Opção Inválida!");
+                            break;
                     }
            
                     break;
@@ -356,14 +366,16 @@ namespace Lista3PR2Emanuela
                         sl  =  sal  -  sal  *  0 . 275 ;
                         imp  =  sal  %  sl ;
                         Console . WriteLine ( " o seu salário líquido é de: R$ "  +  sl  +  " eo imposto foi de: R$ "  +  imp );
+
+                         default:
+                    Console . WriteLine ( " opção inválida! " );
+           
+                    break;
                     }
                     break ;
 
 
-                default:
-                    Console . WriteLine ( " opção inválida! " );
-           
-                    break;
+               
 
            
 
